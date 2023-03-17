@@ -1,24 +1,24 @@
-export const Time = (timerDays) => {
+export const Time = ({timerDays, timerHours, timerMinutes, timerSeconds}) => {
   
   return (
     <div className='times'>
     <section>
-      <p>{timerDays}</p>
+      <p className="num">{timerDays}</p>
       <span>days</span>
     </section>
-    <span>|</span>
+    <span className="num">|</span>
     <section>
-      <p>{timerHours}</p>
+      <p className="num">{timerHours}</p>
       <span>hours</span>
     </section>
-    <span>|</span>
+    <span className="num">|</span>
     <section>
-      <p>{timerMinutes}</p>
+      <p className="num">{timerMinutes}</p>
       <span>minutes</span>
     </section>
-    <span>|</span>
+    <span className="num">|</span>
     <section>
-      <p>{timerSeconds}</p>
+      <p className="num">{timerSeconds}</p>
       <span>seconds</span>
     </section>
   </div>

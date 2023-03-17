@@ -4,10 +4,10 @@ import { Time } from './components/Time'
 
 function App() {
 
-  const [timerDays, setTimerDays] = useState('00')
-  const [timerHours, setTimerHours] = useState('00')
-  const [timerMinutes, setTimerMinutes] = useState('00')
-  const [timerSeconds, setTimerSeconds] = useState('00')
+  const [timerDays, setTimerDays] = useState('--')
+  const [timerHours, setTimerHours] = useState('--')
+  const [timerMinutes, setTimerMinutes] = useState('--')
+  const [timerSeconds, setTimerSeconds] = useState('--')
 
   let interval = useRef()
 
@@ -54,28 +54,12 @@ function App() {
             <h1>big sale on lifetime plan</h1>
             <span className='text'>there is very little left</span>
           </div>
-          <div className='times'>
-            <section>
-              <p>{timerDays}</p>
-              <span>days</span>
-            </section>
-            <span>|</span>
-            <section>
-              <p>{timerHours}</p>
-              <span>hours</span>
-            </section>
-            <span>|</span>
-            <section>
-              <p>{timerMinutes}</p>
-              <span>minutes</span>
-            </section>
-            <span>|</span>
-            <section>
-              <p>{timerSeconds}</p>
-              <span>seconds</span>
-            </section>
-          </div>
-          {/* <Time /> */}
+          <Time
+            timerDays={timerDays}
+            timerHours={timerHours}
+            timerMinutes={timerMinutes}
+            timerSeconds={timerSeconds}
+          />
         </div>
       </section>
       
